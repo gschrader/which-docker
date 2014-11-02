@@ -3,5 +3,5 @@ Witch-Docker
 
 Mac OS X statusbar application for working with Docker.
 
-![](http://gschrader.github.io/Witch-Docker/preview.gif)
+![](https://raw.githubusercontent.com/gschrader/Witch-Docker/master/preview.gif)
 
