@@ -840,9 +840,15 @@
             <items>
                 <menuItem title="Remove" id="N0s-iL-LVd">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="removeMenuItemPress:" target="JiQ-2g-Uuz" id="aeb-Te-hME"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Connect" id="qkW-xg-fMN">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="connectMenuItemPress:" target="JiQ-2g-Uuz" id="PWp-oB-s7y"/>
+                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Eq0-DD-mhg"/>
             </items>

@@ -56,6 +56,10 @@ class Docker {
         }
     }
     
+    func removeContainer(container: Container) {
+        exec("/usr/local/bin/boot2docker ssh docker rm -f \(container.containerId)")
+    }
+    
     func exec(cmd: String) -> String {
         let task = NSTask()
         task.launchPath = "/bin/bash"

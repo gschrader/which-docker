@@ -13,21 +13,20 @@ class TableView: NSTableView {
     @IBOutlet var controller: NSObject!
 
     override func menuForEvent(event: NSEvent) -> NSMenu? {
-        
-        println(selectedRow)
-        let docker = (controller as PopoverViewController).docker
-        let container = docker.containers[selectedRow] as Container
-        
         let menu = super.menuForEvent(event)
-        
         while (menu?.numberOfItems > 3) {
             menu?.removeItemAtIndex(3)
         }
-        
-        for (port: String) in container.ports {
-            let item = NSMenuItem(title: "Browse to \(port)", action: Selector("test:"), keyEquivalent: "")
-            item.representedObject = port
-            menu?.addItem(item)
+
+        if (selectedRow >= 0) {
+            let docker = (controller as PopoverViewController).docker
+            let container = docker.containers[selectedRow] as Container
+            
+            for (port: String) in container.ports {
+                let item = NSMenuItem(title: "Browse to \(port)", action: Selector("test:"), keyEquivalent: "")
+                item.representedObject = port
+                menu?.addItem(item)
+            }
         }
 
         return menu
@@ -43,6 +42,23 @@ class TableView: NSTableView {
             
             println("\(port!)")
         }
+    }
+    
+    @IBAction func connectMenuItemPress(sender: AnyObject) {
+        let docker = (controller as PopoverViewController).docker
+        let container = docker.containers[selectedRow] as Container
+     
+        let script = NSAppleScript(source: "tell application \"Terminal\" to do script \"boot2docker ssh docker exec -it \(container.containerId) bash\"")
+        script?.executeAndReturnError(nil)
+
+        NSAppleScript(source: "tell application \"Terminal\"\n activate\nend tell")?.executeAndReturnError(nil)
+    }
+    
+    @IBAction func removeMenuItemPress(sender: AnyObject) {
+        let docker = (controller as PopoverViewController).docker
+        let container = docker.containers[selectedRow] as Container
+        docker.removeContainer(container)
+        (controller as PopoverViewController).reloadMenuItemPress(sender)
     }
 
 }
