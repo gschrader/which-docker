@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0DD9ED21A0692B9002CB339 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DD9ED11A0692B9002CB339 /* TableView.swift */; };
 		D0F7472F1A0568F00020FC93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7472E1A0568F00020FC93 /* AppDelegate.swift */; };
 		D0F747311A0568F00020FC93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F747301A0568F00020FC93 /* Images.xcassets */; };
 		D0F747341A0568F10020FC93 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F747321A0568F10020FC93 /* MainMenu.xib */; };
 		D0F747401A0568F10020FC93 /* Witch_DockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7473F1A0568F10020FC93 /* Witch_DockerTests.swift */; };
+		D0F7474A1A056A690020FC93 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F747491A056A690020FC93 /* StatusView.swift */; };
+		D0F7474C1A05894A0020FC93 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7474B1A05894A0020FC93 /* PopoverViewController.swift */; };
+		D0F7474E1A05979E0020FC93 /* Docker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7474D1A05979E0020FC93 /* Docker.swift */; };
+		D0F747501A059A860020FC93 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7474F1A059A860020FC93 /* Container.swift */; };
+		D0F7475D1A05B6930020FC93 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F7475C1A05B6930020FC93 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0DD9ED11A0692B9002CB339 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		D0F747291A0568F00020FC93 /* Witch Docker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Witch Docker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7472D1A0568F00020FC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F7472E1A0568F00020FC93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +39,11 @@
 		D0F747391A0568F10020FC93 /* Witch DockerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Witch DockerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F7473E1A0568F10020FC93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F7473F1A0568F10020FC93 /* Witch_DockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Witch_DockerTests.swift; sourceTree = "<group>"; };
+		D0F747491A056A690020FC93 /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		D0F7474B1A05894A0020FC93 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		D0F7474D1A05979E0020FC93 /* Docker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Docker.swift; sourceTree = "<group>"; };
+		D0F7474F1A059A860020FC93 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		D0F7475C1A05B6930020FC93 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../SwiftyJSON/Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +85,16 @@
 		D0F7472B1A0568F00020FC93 /* Witch Docker */ = {
 			isa = PBXGroup;
 			children = (
+				D0F7475C1A05B6930020FC93 /* SwiftyJSON.swift */,
 				D0F7472E1A0568F00020FC93 /* AppDelegate.swift */,
 				D0F747301A0568F00020FC93 /* Images.xcassets */,
 				D0F747321A0568F10020FC93 /* MainMenu.xib */,
 				D0F7472C1A0568F00020FC93 /* Supporting Files */,
+				D0F747491A056A690020FC93 /* StatusView.swift */,
+				D0F7474B1A05894A0020FC93 /* PopoverViewController.swift */,
+				D0F7474D1A05979E0020FC93 /* Docker.swift */,
+				D0F7474F1A059A860020FC93 /* Container.swift */,
+				D0DD9ED11A0692B9002CB339 /* TableView.swift */,
 			);
 			path = "Witch Docker";
 			sourceTree = "<group>";
@@ -205,7 +223,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F7474A1A056A690020FC93 /* StatusView.swift in Sources */,
+				D0F7474C1A05894A0020FC93 /* PopoverViewController.swift in Sources */,
+				D0F747501A059A860020FC93 /* Container.swift in Sources */,
+				D0DD9ED21A0692B9002CB339 /* TableView.swift in Sources */,
+				D0F7475D1A05B6930020FC93 /* SwiftyJSON.swift in Sources */,
 				D0F7472F1A0568F00020FC93 /* AppDelegate.swift in Sources */,
+				D0F7474E1A05979E0020FC93 /* Docker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +417,7 @@
 				D0F747451A0568F10020FC93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0F747461A0568F10020FC93 /* Build configuration list for PBXNativeTarget "Witch DockerTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +426,7 @@
 				D0F747481A0568F10020FC93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
