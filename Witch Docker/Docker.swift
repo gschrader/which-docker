@@ -42,11 +42,15 @@ class Docker {
                 var ports = [String]()
 
                 let portsJson = json[0]["NetworkSettings"]["Ports"]
-                for (key: String, subJson: JSON) in portsJson {
-                    println(key)
-                    let port = subJson[0]["HostPort"].string!
-                    println(port)
-                    ports.append(port)
+                if (portsJson != nil) {
+                    for (key: String, subJson: JSON) in portsJson {
+                        println(key)
+                        if (subJson != nil) {
+                            let port = subJson[0]["HostPort"].string!
+                            println(port)
+                            ports.append(port)
+                        }
+                    }
                 }
                 
                 var newContainer = Container(name: name, image: image, containerId: container, ports: ports)
