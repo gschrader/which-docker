@@ -17,7 +17,7 @@ class PopoverViewController: NSViewController, NSTableViewDataSource {
     @IBOutlet var tableView: NSTableView!
 
     @IBAction func cogwheelMenuPress(sender: AnyObject) {
-        NSMenu.popUpContextMenu(cogwheelMenu, withEvent: NSApplication.sharedApplication().currentEvent!, forView: sender as NSButton)
+        NSMenu.popUpContextMenu(cogwheelMenu, withEvent: NSApplication.sharedApplication().currentEvent!, forView: sender as! NSButton)
     }
 
     @IBAction func reloadMenuItemPress(sender: AnyObject) {
@@ -38,7 +38,7 @@ class PopoverViewController: NSViewController, NSTableViewDataSource {
     }
 
     func tableView(tableView: NSTableView!, viewForTableColumn tableColumn: NSTableColumn!, row: Int) -> NSView! {
-        var container: Container = self.docker.containers[row] as Container
+        var container: Container = self.docker.containers[row] as! Container
 
         if let view = tableView.makeViewWithIdentifier(tableColumn.identifier, owner: self) as? NSTableCellView {
             var textField = view.textField

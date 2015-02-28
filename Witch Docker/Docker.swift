@@ -15,7 +15,7 @@ class Docker {
     var ip: String!
     
     init() {
-        self.ip = exec("/usr/local/bin/boot2docker ip").componentsSeparatedByString(":")[0]
+        self.ip = exec("/usr/local/bin/boot2docker ip").componentsSeparatedByString("\n")[0]
         println(ip)
         
         self.findContainers()
@@ -74,7 +74,7 @@ class Docker {
         task.waitUntilExit()
         
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
-        let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)!
+        let output: String = NSString(data: data, encoding: NSUTF8StringEncoding)! as! String
         
         return output
     }
