@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Witch Docker.xcodeproj">
+      location = "self:Which Docker.xcodeproj">
    </FileRef>
 </Workspace>

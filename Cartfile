@@ -1,0 +1,3 @@
+github "sindresorhus/LaunchAtLogin"
+github "SwiftyJSON/SwiftyJSON"
+github "Carthage/ReactiveTask"

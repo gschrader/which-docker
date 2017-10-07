@@ -1,0 +1,5 @@
+github "Carthage/ReactiveTask" "0.13.0"
+github "ReactiveCocoa/ReactiveSwift" "2.0.1"
+github "SwiftyJSON/SwiftyJSON" "3.1.4"
+github "antitypical/Result" "3.2.4"
+github "sindresorhus/LaunchAtLogin" "v2.0.0"

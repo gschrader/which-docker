@@ -1,15 +1,15 @@
 //
-//  Witch_DockerTests.swift
-//  Witch DockerTests
+//  Which_DockerTests.swift
+//  Which DockerTests
 //
-//  Created by Glen Schrader on 2014-11-01.
-//  Copyright (c) 2014 Glen Schrader. All rights reserved.
+//  Created by Glen Schrader on 2017-10-08.
+//  Copyright © 2017 Glen Schrader. All rights reserved.
 //
 
-import Cocoa
 import XCTest
+@testable import Which_Docker
 
-class Witch_DockerTests: XCTestCase {
+class Which_DockerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +23,12 @@ class Witch_DockerTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }
